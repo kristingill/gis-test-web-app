@@ -2,14 +2,11 @@
 var map = L.map('map').setView([51.505, -0.09], 10);
 
 // map box basemap
-var outdoors = L.tileLayer('https://api.mapbox.com/styles/v1/kristin-gill/clnlryzqa005101p9fypefvpa/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia3Jpc3Rpbi1naWxsIiwiYSI6ImNsbmxzMjg5MDAyOHMybHI3aHByOTBvMmIifQ.hGwNkAhnIjwSRxMGo92e3g', {
+var outdoors = L.tileLayer(mapbox_token, {
     maxZoom: 19,
     attribution: 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     id: 'mapbox/outdoors-v12',
 })
-
-// esri api key to access esri basemaps
-esriApiKey = "AAPK67f2536cf24a483196c273b6a3cec4e54MWR-PwT2NxTRNU8lZ8vo28kbXxeyScvfww-zszzPzxIyrrvnGamB-fLC9steR2D";
 
 // esri basemaps
 var gray = L.esri.Vector.vectorBasemapLayer("ArcGIS:DarkGray", { apiKey: esriApiKey });
